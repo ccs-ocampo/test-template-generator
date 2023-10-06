@@ -1,6 +1,6 @@
 # Test Template Generator PoC
 
-Welcome to our GitHub project! This initiative harnesses the power of the OpenAI API to craft a versatile template for automation test scripts. Whether you're a seasoned developer or just starting your automation journey, this project aims to simplify the process of creating robust test scripts.
+Welcome to our GitHub project! This initiative harnesses the power of the OpenAI API to craft a versatile template for automation test scripts. Whether you're a seasoned developer or just starting your automation journey, this project aims to simplify the process of creating test scripts.
 
 
 ## Features
