@@ -13,7 +13,7 @@ const gptRequest = async () => {
         messages: [
             {
               role: "user",
-              content: "Generate a test script template in Cypress. Only respond with code as plain text without code block syntax around it.",
+              content: `${process.argv[2]}. Only respond with code as plain text without code block syntax around it.`,
             },
           ],
         temperature: 0,
@@ -26,9 +26,9 @@ const gptRequest = async () => {
     
 }
 
-const writeFile = async (text) => {
+const writeFile = async (text, path) => {
     try {
-        await fs.writeFileSync('cypress/e2e/basicTemplate.js', text);
+        await fs.writeFileSync(path, text);
       } catch (err) {
         console.log(err);
       }
@@ -36,7 +36,7 @@ const writeFile = async (text) => {
 
 const generateTestTemplate = async () => {
     const code = await gptRequest();
-    await writeFile(code);
+    await writeFile(code, process.argv[3]);
 }
 
 
