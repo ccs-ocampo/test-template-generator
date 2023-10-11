@@ -13,7 +13,7 @@ const gptRequest = async () => {
         messages: [
             {
               role: "user",
-              content: "Generate a test script template in Cypress",
+              content: "Generate a test script template in Cypress. Only respond with code as plain text without code block syntax around it.",
             },
           ],
         temperature: 0,
