@@ -16,11 +16,9 @@ const gptRequest = async () => {
               content: `${process.argv[2]}. Only respond with code as plain text without code block syntax around it.`,
             },
           ],
-        temperature: 0,
-        max_tokens: 150,
-        top_p: 1.0,
-        frequency_penalty: 0.5,
-        presence_penalty: 0.0,
+        temperature: 0.2,
+        max_tokens: 2048,
+        top_p: 0.1,
     });
     return response.choices[0].message.content;
     
