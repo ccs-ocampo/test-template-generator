@@ -42,13 +42,6 @@ Install dependencies
   npm install
 ```
 
-Run the test generator template
-
-Indicate the framework to use
- ```bash
-    TEST_FRAMEWORK=Cypress
-```
-
 Indicate the framework to use
  ```bash
     TEST_FRAMEWORK=Cypress
@@ -59,6 +52,7 @@ Enter the feature to test
     TEST_FRAMEWORK=Login
 ```
 
+Run the test generator template
 ```bash
     npm run test:generator:basic
 ```
