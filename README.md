@@ -14,7 +14,9 @@ By seamlessly integrating the OpenAI API, this project enables the creation of a
 To run this project, you will need to add the following environment variables to your .env file
 
 `OPENAI_API_KEY`
+
 `TEST_FRAMEWORK`
+
 `COMMON_FEATURE`
 
 Refer to [OpenAI Authentication](https://platform.openai.com/docs/api-reference/authentication) to understand how to generate your APIKey.
