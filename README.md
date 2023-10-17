@@ -49,7 +49,7 @@ Indicate the framework to use
 
 Enter the feature to test
  ```bash
-    TEST_FRAMEWORK=Login
+    COMMON_FEATURE=Login
 ```
 
 Run the test generator template
