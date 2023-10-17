@@ -1,6 +1,5 @@
-const OpenAI = require("openai");
-const fs = require('fs');
-require("dotenv").config();
+import OpenAI from "openai";
+import { writeFile } from "./utils.js"
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
@@ -13,7 +12,7 @@ const gptRequest = async () => {
         messages: [
             {
               role: "user",
-              content: `${process.argv[2]}. Only respond with code as plain text without code block syntax around it.`,
+              content: `Generate a basic test script templates in ${process.env.TEST_FRAMEWORK} to validate a ${process.env.COMMON_FEATURE} feature, covering the main scenarios. Only respond with code as plain text without code block syntax around it.`,
             },
           ],
         temperature: 0.2,
@@ -24,18 +23,7 @@ const gptRequest = async () => {
     
 }
 
-const writeFile = async (text, path) => {
-    try {
-        await fs.writeFileSync(path, text);
-      } catch (err) {
-        console.log(err);
-      }
-};
-
-const generateTestTemplate = async () => {
+export const generateTestTemplate = async () => {
     const code = await gptRequest();
-    await writeFile(code, process.argv[3]);
+    await writeFile(code);
 }
-
-
-generateTestTemplate();
