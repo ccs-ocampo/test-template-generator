@@ -8,17 +8,17 @@ Welcome to our GitHub project! This initiative harnesses the power of the OpenAI
 #### OpenAI Integration
 By seamlessly integrating the OpenAI API, this project enables the creation of automated test scripts with ease.
 
-#### Cypress Configuration
-Our project is thoughtfully configured to work seamlessly with Cypress, a widely adopted end-to-end testing framework. This ensures that you can quickly get started with automating tests for your web applications.
-
 
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
+`OPENAI_API_KEY`
+`TEST_FRAMEWORK`
+`COMMON_FEATURE`
+
 Refer to [OpenAI Authentication](https://platform.openai.com/docs/api-reference/authentication) to understand how to generate your APIKey.
 
-`OPENAI_API_KEY`
 
 ## Run Locally
 
@@ -40,18 +40,27 @@ Install dependencies
   npm install
 ```
 
-Run the basic test generator template
+Run the test generator template
+
+Indicate the framework to use
+ ```bash
+    TEST_FRAMEWORK=Cypress
+```
+
+Indicate the framework to use
+ ```bash
+    TEST_FRAMEWORK=Cypress
+```
+
+Enter the feature to test
+ ```bash
+    TEST_FRAMEWORK=Login
+```
 
 ```bash
     npm run test:generator:basic
 ```
-
-or the login test generator
-
-```bash
-    npm run test:generator:login
-```
-
+Test templates will be placed in /tests
 
 
 
