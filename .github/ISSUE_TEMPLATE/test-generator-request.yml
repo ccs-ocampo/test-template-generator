@@ -3,21 +3,15 @@ description: Request used to define the requirements needed to create the tests 
 title: "[TEST] <title>"
 labels: ["Test", "Template"]
 body:
-- type: textarea
+- type: input 
   attributes:
-    label: Branch name
-    description: Name of the branch that will be created on request approval.
+    label: Test Framework
+    description: Select the Test Framework of your preference.
   validations:
     required: true
-- type: textarea
+- type: input
   attributes:
-    label: Prompt
-    description: GPT Prompt.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: File Location
-    description: Location of the tests created.
+    label: Common Feature
+    description: Enter the feature to test.
   validations:
     required: true
